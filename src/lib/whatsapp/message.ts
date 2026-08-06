@@ -1,5 +1,4 @@
 import { QuoteItem } from '@/types'
-import { formatCurrency } from '../utils/format'
 
 export type Quote = {
   protocol: string;

@@ -26,7 +26,6 @@ export const CsvImportWizard: React.FC<CsvImportWizardProps> = ({
   onComplete,
 }) => {
   const [step, setStep] = useState<1 | 2 | 3 | 4 | 5>(1)
-  const [csvContent, setCsvContent] = useState<string>('')
   const [headers, setHeaders] = useState<string[]>([])
   const [rows, setRows] = useState<string[][]>([])
   const [mapping, setMapping] = useState<Record<string, string>>({})
@@ -49,7 +48,6 @@ export const CsvImportWizard: React.FC<CsvImportWizardProps> = ({
     const reader = new FileReader()
     reader.onload = (evt) => {
       const text = evt.target?.result as string
-      setCsvContent(text)
 
       const lines = text
         .split('\n')
