@@ -2,11 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useQuote } from '@/context/QuoteContext';
 import Navigation from '../Navigation';
 import styles from './SiteHeader.module.css';
 
 export default function SiteHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { itemCount, openDrawer } = useQuote();
 
   return (
     <>
@@ -47,12 +49,12 @@ export default function SiteHeader() {
               </button>
             </form>
 
-            <Link href="/orcamento" className={styles.quoteBtn}>
+            <button onClick={openDrawer} className={styles.quoteBtn} aria-label="Meu Orçamento">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-              <span className={styles.quoteBadge}>0</span>
-            </Link>
+              <span className={styles.quoteBadge}>{itemCount}</span>
+            </button>
             
-            <Link href="/login" className={styles.accountBtn}>
+            <Link href="/entrar" className={styles.accountBtn}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             </Link>
           </div>

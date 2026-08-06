@@ -59,7 +59,7 @@ export default function SiteFooter() {
               <li><Link href="/sobre" className={styles.footerLink}>Sobre a Empresa</Link></li>
               <li><Link href="/blog" className={styles.footerLink}>Blog</Link></li>
               <li><Link href="/contato" className={styles.footerLink}>Contato</Link></li>
-              <li><Link href="/privacidade" className={styles.footerLink}>Política de Privacidade</Link></li>
+              <li><Link href="/politica-de-privacidade" className={styles.footerLink}>Política de Privacidade</Link></li>
               <li><Link href="/termos" className={styles.footerLink}>Termos de Uso</Link></li>
               <li><Link href="/cookies" className={styles.footerLink}>Política de Cookies</Link></li>
             </ul>
