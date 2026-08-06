@@ -16,7 +16,7 @@ export async function GET(_req: NextRequest, { params }: Params) {
       .from('quotes')
       .select(`
         id, protocol, status, customer_name, customer_phone, customer_email,
-        store_preference, notes, public_total_estimate, created_at, updated_at,
+        store_preference, notes, public_total_estimate, created_at, updated_at, user_id,
         quote_items (
           id, quantity, customer_note,
           product_name_snapshot, variant_snapshot, public_code_snapshot,

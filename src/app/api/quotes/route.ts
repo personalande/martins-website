@@ -16,9 +16,10 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const { name, phone, email, store_preference, notes, items } = parsed.data
+    const { name, phone, email, store_preference, notes } = parsed.data
+    const { items } = body
 
-    if (!items || items.length === 0) {
+    if (!items || !Array.isArray(items) || items.length === 0) {
       return NextResponse.json(
         { error: 'O orçamento não pode estar vazio.' },
         { status: 400 }

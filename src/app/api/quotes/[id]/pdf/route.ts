@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@/lib/supabase/server'
 import { handleApiError, NotFoundError } from '@/lib/errors'
-import { renderToBuffer } from '@react-pdf/renderer'
-import { QuotePDFDocument } from '@/lib/pdf/generator'
+import { generateQuotePDFBuffer } from '@/lib/pdf/generator'
 import type { Quote } from '@/types'
 
 interface Params {
@@ -75,7 +74,7 @@ export async function GET(_req: NextRequest, { params }: Params) {
       })),
     }
 
-    const pdfBuffer = await renderToBuffer(QuotePDFDocument({ quote }))
+    const pdfBuffer = await generateQuotePDFBuffer(quote, quote.items)
 
     return new NextResponse(pdfBuffer, {
       status: 200,
