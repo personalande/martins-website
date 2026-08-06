@@ -1,0 +1,108 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(6, 42, 86, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: var(--z-drawer);
+  animation: fadeIn var(--transition-fast);
+}
+
+.drawer {
+  position: fixed;
+  background-color: var(--martins-white);
+  box-shadow: var(--shadow-xl);
+  z-index: calc(var(--z-drawer) + 1);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal);
+}
+
+/* Right slide by default (Desktop / standard) */
+.drawerRight {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 440px;
+  animation: slideInRight var(--transition-normal);
+}
+
+/* Bottom slide on Mobile responsive */
+@media (max-width: 768px) {
+  .drawerResponsive {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: 88vh;
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+    animation: slideInBottom var(--transition-normal);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--martins-border);
+  background-color: var(--martins-blue-950);
+  color: var(--martins-white);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-black);
+  color: var(--martins-white);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  color: var(--martins-white);
+  transition: background-color var(--transition-fast);
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.body {
+  padding: var(--space-lg);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.footer {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--martins-border);
+  background-color: var(--martins-off-white);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInBottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}

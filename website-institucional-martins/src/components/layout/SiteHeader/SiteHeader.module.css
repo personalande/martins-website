@@ -1,0 +1,199 @@
+.siteHeader {
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #E8E5DF;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #202328;
+  padding: 0.25rem;
+}
+
+.logoArea {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.logoText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #062A56;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.logoBadge {
+  color: #D71920;
+}
+
+.logoTagline {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #6C747A;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.searchForm {
+  flex: 1;
+  max-width: 420px;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 0.875rem;
+  border: 2px solid #D8D5CE;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background-color: #F7F4EE;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #062A56;
+  background-color: #FFFFFF;
+}
+
+.searchButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #062A56;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navLink {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #202328;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  transition: color 0.15s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: #D71920;
+}
+
+.actionArea {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchButtonMobile {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #202328;
+  padding: 0.25rem;
+}
+
+.quoteBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #062A56;
+  color: #FFFFFF;
+  padding: 0.5rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.quoteBtn:hover {
+  background-color: #09376e;
+}
+
+.quoteBadge {
+  background-color: #D71920;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  min-width: 1.25rem;
+  text-align: center;
+}
+
+.accountBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #202328;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid #D8D5CE;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.accountBtn:hover {
+  background-color: #F7F4EE;
+}
+
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
+  }
+  .searchForm {
+    display: none;
+  }
+  .hamburgerBtn {
+    display: flex;
+  }
+  .searchButtonMobile {
+    display: flex;
+  }
+  .quoteBtn {
+    padding: 0.5rem;
+  }
+}

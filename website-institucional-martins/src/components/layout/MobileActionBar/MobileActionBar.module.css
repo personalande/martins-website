@@ -1,0 +1,64 @@
+.mobileActionBar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileActionBar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #062A56;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0.25rem;
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  }
+
+  .mobileTab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: #94A3B8;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: color 0.15s ease;
+  }
+
+  .mobileTab.active {
+    color: #F6B719;
+  }
+
+  .mobileTab:not(.active):hover {
+    color: #FFFFFF;
+  }
+
+  .iconWrapper {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .mobileTabBadge {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+    background-color: #D71920;
+    color: #FFFFFF;
+    font-size: 0.625rem;
+    font-weight: 800;
+    border-radius: 999px;
+    padding: 0.1rem 0.35rem;
+    min-width: 0.75rem;
+    text-align: center;
+  }
+}

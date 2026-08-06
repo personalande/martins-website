@@ -1,0 +1,44 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: 0.2rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.blue {
+  background-color: rgba(6, 42, 86, 0.1);
+  color: var(--martins-blue-950);
+  border: 1px solid rgba(6, 42, 86, 0.25);
+}
+
+.yellow {
+  background-color: rgba(246, 183, 25, 0.18);
+  color: #7A5700;
+  border: 1px solid rgba(229, 168, 0, 0.4);
+}
+
+.red {
+  background-color: rgba(215, 25, 32, 0.1);
+  color: var(--martins-red-700);
+  border: 1px solid rgba(215, 25, 32, 0.25);
+}
+
+.green {
+  background-color: rgba(23, 106, 69, 0.1);
+  color: var(--martins-success);
+  border: 1px solid rgba(23, 106, 69, 0.25);
+}
+
+.gray {
+  background-color: var(--martins-paper);
+  color: var(--martins-steel);
+  border: 1px solid var(--martins-border);
+}

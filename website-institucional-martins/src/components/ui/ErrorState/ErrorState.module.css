@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  background-color: var(--martins-white);
+  border: 1.5px solid rgba(215, 25, 32, 0.2);
+  border-radius: var(--radius-md);
+  max-width: 520px;
+  margin: var(--space-xl) auto;
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: rgba(215, 25, 32, 0.1);
+  color: var(--martins-red-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: var(--font-weight-black);
+  color: var(--martins-red-700);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.message {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--martins-steel);
+  margin-bottom: var(--space-lg);
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}

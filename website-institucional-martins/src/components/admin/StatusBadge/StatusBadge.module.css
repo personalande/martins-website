@@ -1,0 +1,51 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Variant styles */
+.success {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.warning {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+
+.danger {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.info {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.neutral {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.purple {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
