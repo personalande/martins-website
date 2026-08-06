@@ -1,0 +1,140 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.sidebar {
+  position: relative;
+  width: 85%;
+  max-width: 360px;
+  background-color: #FFFFFF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out forwards;
+  overflow-y: auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-bottom: 1px solid #E8E5DF;
+}
+
+.logoArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoText {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #062A56;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.logoBadge {
+  color: #D71920;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #202328;
+  padding: 0.5rem;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  border-bottom: 1px solid #E8E5DF;
+}
+
+.navLink {
+  padding: 1rem 1.25rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #202328;
+  text-decoration: none;
+}
+
+.navLink:active {
+  background-color: #F7F4EE;
+}
+
+.storeInfo {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.storeHeader {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #062A56;
+  margin: 0;
+}
+
+.storeCard {
+  background-color: #F7F4EE;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #D8D5CE;
+}
+
+.storeName {
+  font-weight: 700;
+  color: #062A56;
+  margin: 0 0 0.25rem 0;
+  font-size: 0.9375rem;
+}
+
+.storeDetail {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #6C747A;
+  line-height: 1.4;
+}
+
+.actions {
+  padding: 1.25rem;
+  margin-top: auto;
+}
+
+.waBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  padding: 0.875rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+}

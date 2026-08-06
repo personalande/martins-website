@@ -1,0 +1,160 @@
+.hero {
+  background: linear-gradient(135deg, var(--martins-blue-950) 0%, var(--martins-blue-700) 100%);
+  padding: var(--space-3xl) 0;
+  text-align: center;
+}
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  color: var(--martins-white);
+  margin-bottom: var(--space-md);
+}
+.heroSub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.72);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  color: var(--martins-blue-950);
+  margin-bottom: var(--space-lg);
+}
+.sectionTitleLight { color: var(--martins-white); }
+.mission {
+  padding: var(--space-3xl) 0;
+  background: var(--martins-off-white);
+}
+.missionInner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+@media (min-width: 768px) {
+  .missionInner { grid-template-columns: 3fr 2fr; align-items: start; }
+}
+.missionPara {
+  font-size: 1rem;
+  color: var(--martins-steel);
+  line-height: 1.75;
+  margin-bottom: var(--space-md);
+}
+.highlightBox {
+  background: var(--martins-paper);
+  border: 2px dashed var(--martins-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+.highlightLabel {
+  display: inline-block;
+  background: var(--martins-yellow-400);
+  color: var(--martins-blue-950);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+}
+.highlightText {
+  font-size: 0.85rem;
+  color: var(--martins-steel);
+  line-height: 1.6;
+}
+.offer {
+  padding: var(--space-3xl) 0;
+  background: var(--martins-white);
+}
+.offerGrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+@media (min-width: 768px) {
+  .offerGrid { grid-template-columns: repeat(4, 1fr); }
+}
+.offerCard {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  border: 1.5px solid var(--martins-border);
+  border-radius: var(--radius-xl);
+  background: var(--martins-off-white);
+}
+.offerIcon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-md);
+  color: var(--martins-blue-700);
+}
+.offerIcon svg { width: 100%; height: 100%; }
+.offerTitle {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--martins-blue-950);
+  margin-bottom: var(--space-xs);
+}
+.offerDesc {
+  font-size: 0.85rem;
+  color: var(--martins-steel);
+  line-height: 1.6;
+}
+.stores {
+  padding: var(--space-3xl) 0;
+  background: var(--martins-blue-950);
+}
+.storesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+@media (min-width: 768px) { .storesGrid { grid-template-columns: 1fr 1fr; } }
+.storeCard {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+}
+.storeName {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--martins-yellow-400);
+  margin-bottom: var(--space-md);
+}
+.storeAddress {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+.storePhone { margin-bottom: var(--space-md); }
+.storePhoneLink {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+}
+.storeHours {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+.storeClosed { color: rgba(255,255,255,0.3); }
+.mapsLink {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--martins-yellow-400);
+}
+.mipsLink:hover { text-decoration: underline; }
