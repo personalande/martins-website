@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram } from 'lucide-react';
+
 import styles from './SiteFooter.module.css';
 
 export default function SiteFooter() {
@@ -17,8 +17,8 @@ export default function SiteFooter() {
               A sua loja de ferragens e materiais de construção em Paranaguá. Qualidade, variedade e o melhor atendimento para sua obra ou reforma.
             </p>
             <div className={styles.socialLinks}>
-              <a href="https://www.facebook.com/Ferragensmartins/" className={styles.socialLink} aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
-              <a href="https://www.instagram.com/ferragens.martins/" className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+              <a href="https://www.facebook.com/Ferragensmartins/" className={styles.socialLink} aria-label="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
+              <a href="https://www.instagram.com/ferragens.martins/" className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer">IG</a>
             </div>
           </div>
 
