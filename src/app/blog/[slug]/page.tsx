@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { articles, getArticleBySlug } from '@/lib/blog/articles'
 import {
   MapPin, Droplet, HardHat, Paintbrush, Zap,
-  Wrench, Trees, ClipboardList, Hammer
+  Wrench, Trees, ClipboardList, Hammer, Lightbulb
 } from 'lucide-react'
 import styles from './page.module.css'
 
@@ -114,7 +114,9 @@ export default async function BlogPostPage({ params }: Props) {
                 if (section.type === 'tip') {
                   return (
                     <div key={i} className={styles.tip}>
-                      <span className={styles.tipIcon} aria-hidden>💡</span>
+                      <span className={styles.tipIcon} aria-hidden>
+                        <Lightbulb size={20} />
+                      </span>
                       <p>{section.content}</p>
                     </div>
                   )
