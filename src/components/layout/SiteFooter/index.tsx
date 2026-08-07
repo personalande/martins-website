@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Facebook, Instagram } from 'lucide-react';
 import styles from './SiteFooter.module.css';
 
 export default function SiteFooter() {
@@ -16,8 +17,8 @@ export default function SiteFooter() {
               A sua loja de ferragens e materiais de construção em Paranaguá. Qualidade, variedade e o melhor atendimento para sua obra ou reforma.
             </p>
             <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialLink} aria-label="Facebook">[CONTENT_REQUIRED_FB]</a>
-              <a href="#" className={styles.socialLink} aria-label="Instagram">[CONTENT_REQUIRED_IG]</a>
+              <a href="https://www.facebook.com/Ferragensmartins/" className={styles.socialLink} aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+              <a href="https://www.instagram.com/ferragens.martins/" className={styles.socialLink} aria-label="Instagram" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
             </div>
           </div>
 
@@ -69,7 +70,7 @@ export default function SiteFooter() {
         <div className={styles.bottomBanner}>
           <div>&copy; 2025 Ferragens Martins. Todos os direitos reservados.</div>
           <div className={styles.legalLinks}>
-            CNPJ: [CONTENT_REQUIRED]
+            CNPJ: 49.015.088/0001-04
           </div>
         </div>
       </div>

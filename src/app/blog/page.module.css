@@ -1,45 +1,255 @@
+/* ── HERO ── */
 .hero {
-  background: var(--martins-blue-950);
-  padding: var(--space-3xl) 0;
+  background: linear-gradient(135deg, #062A56 0%, #0a3d7a 60%, #1a5ba8 100%);
+  padding: 5rem 0 4rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.heroLabel {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 1.25rem;
 }
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: var(--font-weight-black);
   text-transform: uppercase;
-  color: var(--martins-white);
-  margin-bottom: var(--space-sm);
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 .subtitle {
   font-size: 1.1rem;
   color: rgba(255,255,255,0.7);
+  max-width: 520px;
+  margin: 0 auto;
 }
 
-.emptyState {
-  text-align: center;
-  padding: var(--space-3xl) var(--space-md);
-  background: var(--martins-paper);
-  border: 2px dashed var(--martins-border);
-  border-radius: var(--radius-xl);
-}
-.emptyLabel {
-  display: inline-block;
-  background: var(--martins-yellow-400);
-  color: var(--martins-blue-950);
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  letter-spacing: 0.05em;
-}
-.btn {
-  display: inline-block;
-  margin-top: var(--space-lg);
-  padding: 0.7rem 1.5rem;
-  background: var(--martins-blue-700);
-  color: white;
-  border-radius: var(--radius-md);
-  font-weight: bold;
+/* ── FEATURED CARD ── */
+.featuredCard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
+  background: #fff;
+  border: 1px solid #E8E5DF;
+  border-radius: 16px;
+  padding: 2.5rem;
   text-decoration: none;
+  color: inherit;
+  margin-bottom: 3.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 12px rgba(6,42,86,0.07);
+}
+.featuredCard:hover {
+  box-shadow: 0 8px 32px rgba(6,42,86,0.14);
+  transform: translateY(-2px);
+}
+.featuredEmoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F7F4EE, #E8E5DF);
+  border-radius: 12px;
+  font-size: 5rem;
+  min-height: 160px;
+}
+.featuredBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.categoryTag {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+.featuredTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+  color: #062A56;
+  line-height: 1.2;
+  margin: 0;
+}
+.featuredExcerpt {
+  color: #4A5568;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+}
+.articleMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #6C747A;
+}
+.readBtn {
+  display: inline-block;
+  color: #D71920;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* ── SECTION TITLE ── */
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #062A56;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+/* ── GRID ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #E8E5DF;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  height: 100%;
+}
+.card:hover {
+  box-shadow: 0 6px 24px rgba(6,42,86,0.12);
+  transform: translateY(-3px);
+}
+.cardEmoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F7F4EE, #E8E5DF);
+  font-size: 3.5rem;
+  height: 120px;
+}
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  flex: 1;
+}
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #062A56;
+  line-height: 1.3;
+  margin: 0;
+}
+.cardExcerpt {
+  font-size: 0.875rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* ── CTA BOX ── */
+.ctaBox {
+  background: linear-gradient(135deg, #062A56 0%, #0f3d7a 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+}
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.ctaText {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+.ctaActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ctaWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25D366;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.15s ease;
+}
+.ctaWhatsapp:hover { background: #1da851; }
+.ctaContact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: background 0.15s ease;
+}
+.ctaContact:hover { background: rgba(255,255,255,0.25); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .featuredCard {
+    grid-template-columns: 1fr;
+  }
+  .featuredEmoji {
+    height: 100px;
+    font-size: 3.5rem;
+  }
+  .ctaBox {
+    padding: 2rem 1.25rem;
+  }
 }

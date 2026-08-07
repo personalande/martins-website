@@ -162,7 +162,6 @@ function CatalogContent() {
               </ul>
             ) : products.length === 0 ? (
               <div className={styles.empty}>
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 <h2 className={styles.emptyTitle}>Nenhum produto encontrado</h2>
                 <p className={styles.emptyDesc}>Tente outros termos ou remova os filtros aplicados.</p>
                 {hasActiveFilters && (
