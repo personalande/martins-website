@@ -89,7 +89,7 @@ export default function SiteFooter() {
         </div>
         
         <div className={styles.bottomBanner}>
-          <div>&copy; 2025 Ferragens Martins. Todos os direitos reservados.</div>
+          <div>&copy; 2026 Ferragens Martins. Todos os direitos reservados.</div>
           <div className={styles.legalLinks}>
             CNPJ: 49.015.088/0001-04
           </div>
