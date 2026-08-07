@@ -58,6 +58,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-top: 0.2rem;
+  white-space: nowrap;
 }
 
 .brandDesc {
