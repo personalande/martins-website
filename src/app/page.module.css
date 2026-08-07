@@ -198,6 +198,8 @@
   transition: border-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
   color: var(--martins-graphite);
   text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
 .categoryCard:hover {

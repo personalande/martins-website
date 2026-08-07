@@ -17,21 +17,38 @@ export const metadata: Metadata = {
   },
 }
 
+import { 
+  Wrench, 
+  Hammer, 
+  MapPin, 
+  Droplet, 
+  Zap, 
+  Paintbrush, 
+  Disc, 
+  Shield, 
+  Key, 
+  Home, 
+  Package, 
+  HardHat, 
+  Trees, 
+  Sun 
+} from 'lucide-react';
+
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
-  wrench: <span style={{fontSize: 40}}>🔧</span>,
-  hammer: <span style={{fontSize: 40}}>🔨</span>,
-  pin: <span style={{fontSize: 40}}>📍</span>,
-  droplet: <span style={{fontSize: 40}}>💧</span>,
-  zap: <span style={{fontSize: 40}}>⚡</span>,
-  'paint-brush': <span style={{fontSize: 40}}>🖌️</span>,
-  disc: <span style={{fontSize: 40}}>💿</span>,
-  shield: <span style={{fontSize: 40}}>🛡️</span>,
-  key: <span style={{fontSize: 40}}>🔑</span>,
-  home: <span style={{fontSize: 40}}>🏠</span>,
-  box: <span style={{fontSize: 40}}>📦</span>,
-  'user-check': <span style={{fontSize: 40}}>👷</span>,
-  layers: <span style={{fontSize: 40}}>🌲</span>,
-  sun: <span style={{fontSize: 40}}>☀️</span>,
+  wrench: <Wrench size={40} strokeWidth={1.5} />,
+  hammer: <Hammer size={40} strokeWidth={1.5} />,
+  pin: <MapPin size={40} strokeWidth={1.5} />,
+  droplet: <Droplet size={40} strokeWidth={1.5} />,
+  zap: <Zap size={40} strokeWidth={1.5} />,
+  'paint-brush': <Paintbrush size={40} strokeWidth={1.5} />,
+  disc: <Disc size={40} strokeWidth={1.5} />,
+  shield: <Shield size={40} strokeWidth={1.5} />,
+  key: <Key size={40} strokeWidth={1.5} />,
+  home: <Home size={40} strokeWidth={1.5} />,
+  box: <Package size={40} strokeWidth={1.5} />,
+  'user-check': <HardHat size={40} strokeWidth={1.5} />,
+  layers: <Trees size={40} strokeWidth={1.5} />,
+  sun: <Sun size={40} strokeWidth={1.5} />,
 };
 
 async function getFeaturedProducts() {

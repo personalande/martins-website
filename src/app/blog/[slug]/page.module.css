@@ -20,10 +20,12 @@
   transition: color 0.15s;
 }
 .breadLink:hover { color: #fff; }
-.coverEmoji {
-  font-size: 4rem;
+.coverIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
-  display: block;
+  color: rgba(255,255,255,0.85);
   filter: drop-shadow(0 4px 16px rgba(0,0,0,0.25));
 }
 .categoryTag {
@@ -254,7 +256,7 @@
   transition: color 0.15s;
 }
 .sideLink:hover { color: #D71920; }
-.sideEmoji { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+.sideIcon { flex-shrink: 0; margin-top: 0.05rem; color: #062A56; }
 .sideCtaCard {
   background: linear-gradient(135deg, #062A56 0%, #0a3d7a 100%);
   border-radius: 12px;

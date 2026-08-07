@@ -1,12 +1,40 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { articles } from '@/lib/blog/articles'
+import {
+  MapPin, Droplet, HardHat, Paintbrush, Zap,
+  Wrench, Trees, ClipboardList, Hammer
+} from 'lucide-react'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'Blog | Ferragens Martins',
   description: 'Dicas de obra, manutenção, hidráulica, elétrica, pintura e novidades da Ferragens Martins de Paranaguá-PR.',
   keywords: ['ferragens', 'obra', 'dicas', 'manutenção', 'reforma', 'paranaguá'],
+}
+
+const BLOG_ICONS: Record<string, React.ReactNode> = {
+  'map-pin': <MapPin size={48} strokeWidth={1.5} />,
+  droplet: <Droplet size={48} strokeWidth={1.5} />,
+  'hard-hat': <HardHat size={48} strokeWidth={1.5} />,
+  paintbrush: <Paintbrush size={48} strokeWidth={1.5} />,
+  zap: <Zap size={48} strokeWidth={1.5} />,
+  wrench: <Wrench size={48} strokeWidth={1.5} />,
+  trees: <Trees size={48} strokeWidth={1.5} />,
+  'clipboard-list': <ClipboardList size={48} strokeWidth={1.5} />,
+  hammer: <Hammer size={48} strokeWidth={1.5} />,
+}
+
+const BLOG_ICONS_SM: Record<string, React.ReactNode> = {
+  'map-pin': <MapPin size={36} strokeWidth={1.5} />,
+  droplet: <Droplet size={36} strokeWidth={1.5} />,
+  'hard-hat': <HardHat size={36} strokeWidth={1.5} />,
+  paintbrush: <Paintbrush size={36} strokeWidth={1.5} />,
+  zap: <Zap size={36} strokeWidth={1.5} />,
+  wrench: <Wrench size={36} strokeWidth={1.5} />,
+  trees: <Trees size={36} strokeWidth={1.5} />,
+  'clipboard-list': <ClipboardList size={36} strokeWidth={1.5} />,
+  hammer: <Hammer size={36} strokeWidth={1.5} />,
 }
 
 function formatDate(iso: string) {
@@ -32,7 +60,7 @@ export default function BlogPage() {
 
         {/* ── DESTAQUE ── */}
         <Link href={`/blog/${featured.slug}`} className={styles.featuredCard}>
-          <div className={styles.featuredEmoji} aria-hidden="true">{featured.coverEmoji}</div>
+          <div className={styles.featuredIcon} aria-hidden="true">{BLOG_ICONS[featured.coverIcon]}</div>
           <div className={styles.featuredBody}>
             <span className={styles.categoryTag} style={{ background: featured.categoryColor }}>{featured.category}</span>
             <h2 className={styles.featuredTitle}>{featured.title}</h2>
@@ -52,7 +80,7 @@ export default function BlogPage() {
           {rest.map((article) => (
             <li key={article.slug}>
               <Link href={`/blog/${article.slug}`} className={styles.card}>
-                <div className={styles.cardEmoji} aria-hidden="true">{article.coverEmoji}</div>
+                <div className={styles.cardIcon} aria-hidden="true">{BLOG_ICONS_SM[article.coverIcon]}</div>
                 <div className={styles.cardBody}>
                   <span className={styles.categoryTag} style={{ background: article.categoryColor }}>{article.category}</span>
                   <h3 className={styles.cardTitle}>{article.title}</h3>

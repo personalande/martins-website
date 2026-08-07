@@ -36,29 +36,32 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  width: 140px;
 }
 
 .logoLine1 {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.35rem;
   font-weight: 900;
   color: #062A56;
-  letter-spacing: 0.04em;
   line-height: 1;
   text-transform: uppercase;
-  display: block;
+  width: 100%;
 }
 
 .logoLine2 {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.75rem;
   font-weight: 900;
   color: #D71920;
-  letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
-  display: block;
   margin-top: -0.05em;
+  width: 100%;
 }
 
 .logoTagline {

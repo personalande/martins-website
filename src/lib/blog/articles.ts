@@ -7,7 +7,7 @@ export interface Article {
   publishedAt: string;
   readingTime: number;
   excerpt: string;
-  coverEmoji: string;
+  coverIcon: string;
   body: Section[];
   cta: CTA;
 }
@@ -36,7 +36,7 @@ export const articles: Article[] = [
     publishedAt: '2025-07-10',
     readingTime: 6,
     excerpt: 'Usar o parafuso errado pode comprometer a segurança e a durabilidade de qualquer fixação. Aprenda a escolher o parafuso ideal para cada situação.',
-    coverEmoji: '🔩',
+    coverIcon: 'map-pin',
     body: [
       {
         type: 'paragraph',
@@ -119,7 +119,7 @@ export const articles: Article[] = [
     publishedAt: '2025-07-18',
     readingTime: 8,
     excerpt: 'Entender o básico sobre instalação hidráulica pode te poupar muito dinheiro e evitar problemas sérios como infiltrações e vazamentos.',
-    coverEmoji: '🔧',
+    coverIcon: 'droplet',
     body: [
       {
         type: 'paragraph',
@@ -209,7 +209,7 @@ export const articles: Article[] = [
     publishedAt: '2025-07-24',
     readingTime: 7,
     excerpt: 'Usar EPI não é só exigência da lei — é a diferença entre voltar para casa inteiro ou não. Saiba quais equipamentos são indispensáveis para cada tarefa.',
-    coverEmoji: '🪖',
+    coverIcon: 'hard-hat',
     body: [
       {
         type: 'paragraph',
@@ -294,7 +294,7 @@ export const articles: Article[] = [
     publishedAt: '2025-07-30',
     readingTime: 7,
     excerpt: 'Uma pintura bem feita começa muito antes de abrir a tinta. O preparo da superfície é o que separa um resultado duradouro de um trabalho que descasca em meses.',
-    coverEmoji: '🎨',
+    coverIcon: 'paintbrush',
     body: [
       {
         type: 'paragraph',
@@ -391,7 +391,7 @@ export const articles: Article[] = [
     publishedAt: '2025-08-01',
     readingTime: 9,
     excerpt: 'A instalação elétrica é invisível quando funciona bem e devastadora quando falha. Entenda os princípios básicos para tomar decisões seguras na sua obra.',
-    coverEmoji: '⚡',
+    coverIcon: 'zap',
     body: [
       {
         type: 'paragraph',
@@ -494,7 +494,7 @@ export const articles: Article[] = [
     publishedAt: '2025-08-05',
     readingTime: 8,
     excerpt: 'Reformar um banheiro é um dos projetos mais impactantes que você pode fazer numa casa — e um dos mais complexos. Com o planejamento certo, dá para fazer sem estresse.',
-    coverEmoji: '🚿',
+    coverIcon: 'wrench',
     body: [
       {
         type: 'paragraph',
@@ -592,7 +592,7 @@ export const articles: Article[] = [
     publishedAt: '2025-08-08',
     readingTime: 6,
     excerpt: 'A escolha errada da madeira pode custar caro: peças que apodrecem, empenam ou não suportam o peso. Saiba como escolher a madeira tratada certa para cada uso.',
-    coverEmoji: '🪵',
+    coverIcon: 'trees',
     body: [
       {
         type: 'paragraph',
@@ -681,7 +681,7 @@ export const articles: Article[] = [
     publishedAt: '2025-08-10',
     readingTime: 7,
     excerpt: 'A maioria das obras estoura o orçamento por falta de planejamento. Aprenda a fazer um orçamento realista que inclua materiais, mão de obra e uma reserva para imprevistos.',
-    coverEmoji: '📋',
+    coverIcon: 'clipboard-list',
     body: [
       {
         type: 'paragraph',
@@ -787,7 +787,7 @@ export const articles: Article[] = [
     publishedAt: '2025-08-12',
     readingTime: 5,
     excerpt: 'Com o kit certo de ferramentas, você resolve a maioria dos problemas domésticos sozinho. Saiba quais ferramentas realmente valem o investimento.',
-    coverEmoji: '🔨',
+    coverIcon: 'hammer',
     body: [
       {
         type: 'paragraph',

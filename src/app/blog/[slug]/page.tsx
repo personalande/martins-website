@@ -2,10 +2,38 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { articles, getArticleBySlug } from '@/lib/blog/articles'
+import {
+  MapPin, Droplet, HardHat, Paintbrush, Zap,
+  Wrench, Trees, ClipboardList, Hammer
+} from 'lucide-react'
 import styles from './page.module.css'
 
 interface Props {
   params: Promise<{ slug: string }>
+}
+
+const BLOG_ICONS: Record<string, React.ReactNode> = {
+  'map-pin': <MapPin size={56} strokeWidth={1.5} />,
+  droplet: <Droplet size={56} strokeWidth={1.5} />,
+  'hard-hat': <HardHat size={56} strokeWidth={1.5} />,
+  paintbrush: <Paintbrush size={56} strokeWidth={1.5} />,
+  zap: <Zap size={56} strokeWidth={1.5} />,
+  wrench: <Wrench size={56} strokeWidth={1.5} />,
+  trees: <Trees size={56} strokeWidth={1.5} />,
+  'clipboard-list': <ClipboardList size={56} strokeWidth={1.5} />,
+  hammer: <Hammer size={56} strokeWidth={1.5} />,
+}
+
+const BLOG_ICONS_SM: Record<string, React.ReactNode> = {
+  'map-pin': <MapPin size={20} strokeWidth={1.5} />,
+  droplet: <Droplet size={20} strokeWidth={1.5} />,
+  'hard-hat': <HardHat size={20} strokeWidth={1.5} />,
+  paintbrush: <Paintbrush size={20} strokeWidth={1.5} />,
+  zap: <Zap size={20} strokeWidth={1.5} />,
+  wrench: <Wrench size={20} strokeWidth={1.5} />,
+  trees: <Trees size={20} strokeWidth={1.5} />,
+  'clipboard-list': <ClipboardList size={20} strokeWidth={1.5} />,
+  hammer: <Hammer size={20} strokeWidth={1.5} />,
 }
 
 export async function generateStaticParams() {
@@ -50,7 +78,7 @@ export default async function BlogPostPage({ params }: Props) {
             <span aria-hidden>›</span>
             <span>{article.category}</span>
           </div>
-          <div className={styles.coverEmoji} aria-hidden="true">{article.coverEmoji}</div>
+          <div className={styles.coverIcon} aria-hidden="true">{BLOG_ICONS[article.coverIcon]}</div>
           <span className={styles.categoryTag} style={{ background: article.categoryColor }}>{article.category}</span>
           <h1 className={styles.heroTitle}>{article.title}</h1>
           <p className={styles.heroSub}>{article.subtitle}</p>
@@ -135,7 +163,7 @@ export default async function BlogPostPage({ params }: Props) {
                   {articles.filter(a => a.slug !== slug).slice(0, 5).map((a) => (
                     <li key={a.slug}>
                       <Link href={`/blog/${a.slug}`} className={styles.sideLink}>
-                        <span className={styles.sideEmoji} aria-hidden>{a.coverEmoji}</span>
+                        <span className={styles.sideIcon} aria-hidden>{BLOG_ICONS_SM[a.coverIcon]}</span>
                         <span>{a.title}</span>
                       </Link>
                     </li>
